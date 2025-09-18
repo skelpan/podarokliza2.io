@@ -322,3 +322,36 @@ function initConstellationMode() {
     setupCanvas();
     window.addEventListener('resize', setupCanvas);
 }
+// Добавьте в конец файла script.js
+
+// Оптимизация для мобильных устройств
+function optimizeForMobile() {
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {
+        // Уменьшаем количество элементов для мобильных
+        const stars = document.querySelectorAll('.star');
+        if (stars.length > 150) {
+            for (let i = 150; i < stars.length; i++) {
+                stars[i].remove();
+            }
+        }
+        
+        // Отключаем сложные анимации на слабых устройствах
+        if (navigator.deviceMemory && navigator.deviceMemory < 4) {
+            document.querySelectorAll('.floating-element').forEach(el => el.remove());
+            document.querySelectorAll('.floating-formula').forEach(el => el.remove());
+        }
+    }
+}
+
+// Вызываем оптимизацию после загрузки
+window.addEventListener('load', optimizeForMobile);
+
+// Предотвращаем масштабирование при двойном тапе
+let lastTouchEnd = 0;
+document.addEventListener('touchend', function (event) {
+    const now = (new Date()).getTime();
+    if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+    }
+    lastTouchEnd = now;
+}, false);
