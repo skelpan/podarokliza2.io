@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космическое поздравление!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="universe">
+        <!-- Черная дыра в центре -->
+        <div class="black-hole">
+            <div class="black-hole-core"></div>
+            <div class="accretion-disk"></div>
+            <div class="particle-ring"></div>
+        </div>
+        
+        <!-- Звездное небо -->
+        <div class="stars-container"></div>
+        
+        <!-- Планеты -->
+        <div class="planets-container">
+            <div class="planet planet-1"></div>
+            <div class="planet planet-2"></div>
+            <div class="planet planet-3"></div>
+        </div>
+        
+        <!-- Контент -->
+        <div class="content">
+            <div class="card">
+                <div class="card-header">
+                    <h1>С Днём Рождения, <span class="name">Анна</span>!</h1>
+                    <div class="class-name">От твоего 11"А" класса</div>
+                </div>
+                
+                <div class="card-body">
+                    <div class="message-section">
+                        <div class="message-block">
+                            <div class="message-icon"><i class="fas fa-atom"></i></div>
+                            <p>Пусть твоя жизнь будет подобна квантовому полю - полна невероятных возможностей и суперпозиций счастья!</p>
+                        </div>
+                        
+                        <div class="message-block">
+                            <div class="message-icon"><i class="fas fa-rocket"></i></div>
+                            <p>Желаем, чтобы твоя энергия била через край, как сингулярность черной дыры, притягивая к тебе только лучшее!</p>
+                        </div>
+                        
+                        <div class="message-block">
+                            <div class="message-icon"><i class="fas fa-star"></i></div>
+                            <p>Пусть каждый твой день сияет ярче квазара, а удача следует за тобой, как искривление пространства-времени!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="physics-formula">
+                        <div class="formula">F = G × m₁ × m₂ / r²</div>
+                        <div class="formula-desc">Сила нашего восхищения тобой обратно пропорциональна квадрату расстояния!</div>
+                    </div>
+                    
+                    <div class="class-signature">
+                        <p>С любовью и восхищением,</p>
+                        <p class="signature">Твой 11"А" класс ♥</p>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <button id="show-more" class="cosmic-btn">
+                        <i class="fas fa-graduation-cap"></i> Научное поздравление
+                    </button>
+                    <button id="toggle-constellation" class="cosmic-btn constellation-btn">
+                        <i class="fas fa-star"></i> Создать созвездие
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Дополнительное поздравление -->
+            <div id="extra-message" class="extra-message">
+                <div class="message-content">
+                    <h2><i class="fas fa-brain"></i> Научное поздравление</h2>
+                    <p>Как чёрная дыра искривляет пространство-время, так и твоё присутствие преображает всё вокруг!</p>
+                    <p>Пусть твоя мудрость будет безгранична, как Вселенная, а сердце - полно тепла, как термоядерная реакция на Солнце!</p>
+                    <p>Оставайся такой же загадочной, как тёмная материя, и такой же яркой, как вспышка сверхновой!</p>
+                    <div class="formula">E = mc²</div>
+                    <div class="formula-desc">Твоя энергия способна на великие дела!</div>
+                    <button id="close-extra" class="cosmic-btn">Вернуться</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Интерактивные элементы -->
+        <div class="floating-elements">
+            <div class="floating-element"><i class="fas fa-atom"></i></div>
+            <div class="floating-element"><i class="fas fa-meteor"></i></div>
+            <div class="floating-element"><i class="fas fa-rocket"></i></div>
+            <div class="floating-element"><i class="fas fa-star"></i></div>
+            <div class="floating-element"><i class="fas fa-moon"></i></div>
+        </div>
+        
+        <!-- Созвездия -->
+        <div class="constellation-mode">
+            <div class="constellation-instruction">
+                <p>Режим создания созвездия: кликайте по экрану, чтобы разместить звезды</p>
+                <button id="clear-constellation" class="cosmic-btn">Очистить</button>
+                <button id="exit-constellation" class="cosmic-btn">Закрыть</button>
+            </div>
+        </div>
+        <canvas id="constellation-canvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
